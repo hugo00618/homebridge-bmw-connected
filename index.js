@@ -206,7 +206,8 @@ BMWConnected.prototype.getauth = function(callback) {
 				 if (!err && response.statusCode == 302) {
 					 //this.log('Auth Success!');
 					 var d = new Date();
-				   var n = d.getTime();
+					 var n = d.getTime();
+					 this.log('Response: ' + response);
 					 var location = response.headers['location'];
 					 //this.log(location);
 					 var myURL = require('url').parse(location).hash;
